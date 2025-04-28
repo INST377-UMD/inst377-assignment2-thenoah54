@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>377 Assignment 2</title>
+        <script src='A2_home.js' defer></script>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #buttonGroup1 {
+                text-align: center;
+            }
+            #buttonGroup1 button {
+            background: #5E5DF0;
+            border-radius: 999px;
+            box-shadow: #5E5DF0 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: fit-content;
+            word-break: break-word;
+            border: 0;
+
+            }
+            #quoteDiv {
+                margin: 10px;
+                background-color: white;
+                border: 2px, solid;
+                text-align: center;
+                width: 50%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>INST377 - Activities</h1>
+        <nav id="navigation">
+            <ul>
+                <li>
+                    <a href="A2_home.html">Home</a>
+                </li>
+                <li>
+                    <a href="A2_stocks.html">Stocks</a>
+                </li>
+                <li>
+                    <a href="A2_dogs.html">Dogs</a>                
+                </li>
+            </ul>
+        </nav>
+
+        <h1>There are some different activities we can try!</h1>
+        <div id="buttonGroup1">
+            <a href="A2_stocks.html"><button>Stocks</button></a>
+            <a href="A2_dogs.html"><button>Dogs</button></a>
+        </div>
+
+        <div id="mainContent">
+            <div id="quoteDiv">
+                <h2>Quote of the Page Load</h2>
+                <p id="quote"></p>
+                <p id="author"></p>
+            </div>
+    
+            <div id="audioDiv">
+                <h1>You can Navigate using Audio!</h1>
+                <p>Ensure your Mic is enabled</p>
+                <ul>
+                    <li>
+                        Navigate to a different page
+                        <ul><li>Say: Navigate to &lt;page&gt;</li></ul>
+                    </li>
+                    <li>
+                        Change the page color
+                        <ul><li>Say: Chane the color to &lt;color&gt;</li></ul>
+                    </li>
+                    <li>
+                        Say hello back to you
+                        <ul><li>Say: Hello</li></ul>
+                    </li>
+                </ul>
+                <div id="buttonGroup2">
+                    <button>Turn on Listening</button>
+                    <button>Turn off Listening</button>
+                </div>
+            </div>
+        </div>
+
+</html>
