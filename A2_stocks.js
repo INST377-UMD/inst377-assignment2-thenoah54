@@ -109,6 +109,47 @@ function top5Stocks() {
     
 }
 
+function audio() {
+  if (annyang) {
+      // Let's define a command.
+      const changeColor = function(color) {
+        document.body.style.backgroundColor = color;
+    }
+
+    const changePage = function(page) {
+        window.location.replace(`A2_${page}.html`);
+    }
+
+    const changeStock = function(stock) {
+        document.getElementById('ticker').value = stock.toUpperCase();
+        lookupStocks();
+    }
+
+    const changeName = function() {
+        document.getElementById('ticker').value = 'WTF'
+    }
+    
+    const commands = {
+        'hello': () => { alert('Hello world!'); },
+        'change the color to *color': changeColor,
+        'navigate to *page': changePage,
+        'lookup *stock': changeStock,
+    }
+      
+      // Add our commands to annyang
+      annyang.addCommands(commands);
+              
+  }
+}
+
+function startAudio() {
+  audio();
+  annyang.start();
+}
+function endAudio() {
+  annyang.abort();
+}
+
 window.onload = top5Stocks;
 
 

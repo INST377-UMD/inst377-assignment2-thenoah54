@@ -53,6 +53,8 @@
             color: rgba(0, 0, 0, .3);
             }
         </style>
+        <!-- audio -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     </head>
     <body>
         <h1>INST377 - Activities</h1>
@@ -72,7 +74,7 @@
         <h1>Let's chart some stocks!</h1>
 
         <form id="stockLookup">
-            <input type="text" id="ticker" required>
+            <input type="text" id="ticker" maxlength="5" required>
             <br>
             <select id="multiplier">
                 <option>30</option>
@@ -119,8 +121,8 @@
                     </li> 
                 </ul>
                 <div id="buttonGroup2">
-                    <button>Turn on Listening</button>
-                    <button>Turn off Listening</button>
+                    <button onclick="startAudio()">Turn on Listening</button>
+                    <button onclick="endAudio()">Turn off Listening</button>
                 </div>
             </div>
         </div>

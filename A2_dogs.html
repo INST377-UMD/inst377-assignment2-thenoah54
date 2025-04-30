@@ -63,8 +63,10 @@
             box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
             transform: translateY(0);
             }
-
+            
         </style>
+        <!-- audio -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     </head>
     <body>
         <h1>INST377 - Activities</h1>
@@ -123,8 +125,8 @@
                     </li>
                 </ul>
                 <div id="buttonGroup2">
-                    <button>Turn on Listening</button>
-                    <button>Turn off Listening</button>
+                    <button onclick="startAudio()">Turn on Listening</button>
+                    <button onclick="endAudio()">Turn off Listening</button>
                 </div>
         </div>
 

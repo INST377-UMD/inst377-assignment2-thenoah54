@@ -38,6 +38,8 @@
             }
 
         </style>
+        <!-- audio -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     </head>
     <body>
         <h1>INST377 - Activities</h1>
@@ -78,7 +80,7 @@
                     </li>
                     <li>
                         Change the page color
-                        <ul><li>Say: Chane the color to &lt;color&gt;</li></ul>
+                        <ul><li>Say: Change the color to &lt;color&gt;</li></ul>
                     </li>
                     <li>
                         Say hello back to you
@@ -86,8 +88,8 @@
                     </li>
                 </ul>
                 <div id="buttonGroup2">
-                    <button>Turn on Listening</button>
-                    <button>Turn off Listening</button>
+                    <button onclick="startAudio()">Turn on Listening</button>
+                    <button onclick="endAudio()">Turn off Listening</button>
                 </div>
             </div>
         </div>

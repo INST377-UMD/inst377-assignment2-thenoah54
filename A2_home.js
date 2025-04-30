@@ -12,4 +12,37 @@ function generateQuote() {
     });
 }
 
+function audio() {
+    if (annyang) {
+        // Let's define a command.
+
+        const changeColor = function(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        const changePage = function(page) {
+            window.location.replace(`A2_${page}.html`);
+        }
+        
+
+        const commands = {
+            'hello': () => { alert('Hello world!'); },
+            'change the color to *color': changeColor,
+            'navigate to *page': changePage    
+        }
+        
+        // Add our commands to annyang
+        annyang.addCommands(commands);
+                
+    }
+}
+
+function startAudio() {
+    annyang.start();
+}
+function endAudio() {
+    annyang.abort();
+}
+
+window.onload = audio();
 window.onload = generateQuote;
