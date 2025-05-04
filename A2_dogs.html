@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>377 Assignment 2</title>
+        <script src='A2_dogs.js' defer></script>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #dogSlider {
+                width: 612px;
+                height: 400px;      
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                position: relative;
+            }
+            #dogSlider img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain; 
+                display: block;
+                margin: auto;
+            }
+
+            .dogClass {
+            align-items: center;
+            background-clip: padding-box;
+            background-color: #fa6400;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+            box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            justify-content: center;
+            line-height: 1.25;
+            margin: 5px;
+            min-height: 3rem;
+            padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+            position: relative;
+            text-decoration: none;
+            transition: all 250ms;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: baseline;
+            width: auto;
+            }
+            .dogClass:hover,
+            .dogClass:focus {
+            background-color: #fb8332;
+            box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+            }
+            .dogClass:hover {
+            transform: translateY(-1px);
+            }
+            .dogClass:active {
+            background-color: #c85000;
+            box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+            transform: translateY(0);
+            }
+            
+        </style>
+        <!-- audio -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    </head>
+    <body>
+        <h1>INST377 - Activities</h1>
+        <nav id="navigation">
+            <ul>
+                <li>
+                    <a href="A2_home.html">Home</a>
+                </li>
+                <li>
+                    <a href="A2_stocks.html">Stocks</a>
+                </li>
+                <li>
+                    <a href="A2_dogs.html">Dogs</a>                
+                </li>
+            </ul>
+        </nav>
+        <h1>Dogs</h1>
+
+        <div id="holder">
+            <div id="dogSlider" data-simple-slider></div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+        </div>
+
+        <div id="dogButtons">
+            <!--They get created in this div-->
+        </div>
+
+        <div id="dogInfo">
+            <!--When you click the dog button, this div pops up idk-->
+            <h1 id="dogName"></h1>
+            <h3 id="dogDesc"></h3>
+            <h3 id="min"></h3>
+            <h3 id="max"></h3>
+        </div>
+
+
+        <div id="mainContent">
+            <div id="audioDiv">
+                <h1>You can Navigate using Audio!</h1>
+                <p>Ensure your Mic is enabled</p>
+                <ul>
+                    <li>
+                        Navigate to a different page
+                        <ul><li>Say: Navigate to &lt;page&gt;</li></ul>
+                    </li>
+                    <li>
+                        Change the page color
+                        <ul><li>Say: Change the color to &lt;color&gt;</li></ul>
+                    </li>
+                    <li>
+                        Say hello back to you
+                        <ul><li>Say: Hello</li></ul>
+                    </li>
+                    <li>
+                        Load Dog Breed 
+                        <ul><li>Say: Load dog breed &lt;dog breed name&gt;</li></ul>
+                    </li>
+                </ul>
+                <div id="buttonGroup2">
+                    <button onclick="startAudio()">Turn on Listening</button>
+                    <button onclick="endAudio()">Turn off Listening</button>
+                </div>
+        </div>
+
+</html>
